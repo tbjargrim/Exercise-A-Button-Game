@@ -34,10 +34,6 @@ function runAnimation() {
     })
 }
 
-nextButton.addEventListener('click',() => {
-    location.href = "pageThree.html"
-})
-
 replay.addEventListener('click', () => {
     resetDOM()
     runAnimation()

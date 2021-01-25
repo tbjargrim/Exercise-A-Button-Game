@@ -21,12 +21,7 @@ body {
     overflow:hidden;
     margin:0; */
 }
-.secondPage{
-    background:url('https://images.unsplash.com/photo-1514964420691-1eb9a8232581?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
+
 
 
 h1{
@@ -146,8 +141,95 @@ h4{
     color:white;
 }
 
-/*Button Two*/
+/* Button Two Cred to https://codepen.io/antonioescudero/pen/zrxGve */
+.secondPage{
+    background:url('https://images.unsplash.com/photo-1514964420691-1eb9a8232581?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+#clouds{
+	padding: 100px 0;
+	/* background: #c9dbe9; */
+	background:linear-gradient(top, #c9dbe9 0%, #fff 100%);
 
+}
+.cloud,
+.buttonTwo {
+    position: relative; 
+	width: 200px; height: 60px;
+	background: #fff;
+	border-radius: 200px;
+}
+.cloud:before, .cloud:after,
+.buttonTwo:before, .buttonTwo:after {
+	content: '';
+	position: absolute; 
+	background: #fff;
+	width: 100px; height: 80px;
+	position: absolute; top: -15px; left: 10px;
+	border-radius: 100px;
+	transform: rotate(30deg);
+}
+.cloud:after,
+.buttonTwo:after {
+    width: 120px; 
+    height: 120px;
+    top: -55px; 
+    left: auto; 
+    right: 15px;
+}
+.nr1 {
+    animation: moveclouds 15s linear infinite;
+}
+.nr2 {
+	left: 200px;
+	transform: scale(0.6);
+	opacity: 0.6; 
+	animation: moveclouds 25s linear infinite;
+}
+.nr3 {
+    left:-250px;
+    top:-200px;
+	transform: scale(0.8);
+	opacity: 0.8; 
+	animation: moveclouds 20s linear infinite;
+}
+.nr4 {
+    left: 470px; 
+    top: -250px;
+	transform: scale(0.75);
+	opacity: 0.75; 
+	animation: moveclouds 18s linear infinite;
+}
+.nr5 {
+	left: -150px; top: -150px;
+	transform: scale(0.8);
+	opacity: 0.8;
+	animation: moveclouds 20s linear infinite;
+}
+
+
+.buttonTwo,
+.buttonTwo:before,
+.buttonTwo:after{
+    background-color:rgb(241, 217, 231);
+    border-radius:50%;
+    border:none;
+    color:white;
+    position:absolute;
+}
+.buttonTwo{
+    left: -150px; top:250px;
+	transform: scale(0.6);
+	opacity: 0.8;
+    animation: moveclouds 19s linear infinite;
+    outline:none;
+}
+@keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
 .counter {
     position:fixed;
     top:50%;
@@ -247,19 +329,25 @@ h4{
     background:#000;
     overflow:hidden;
 }
+.sectionGlowing{
+    display:flex;
+    margin:0px 100px;
+    margin-left:500px;
+}
 .glowing
 {
     position:relative;
-    min-width:750px;
-    height:750px;
+    width:670px;
+    height:670px;
 }
 .thirdButton
 {
     cursor:pointer;
     height:100px;
-    width:100px;
+    width:250px;
     background-color:black;
     border:none;
+    margin-top:250px;
 }
 .glowing span
 {
